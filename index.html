@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Quiz App ✨</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+    <!-- Animated Background Particles -->
+    <div id="particles"></div>
+    
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- User Profile Section -->
+    <div id="user-profile" class="user-profile hidden">
+        <div class="profile-avatar" id="profile-avatar">👤</div>
+        <div class="profile-info">
+            <span class="profile-name" id="profile-name">Guest</span>
+        </div>
+    </div>
+
+    <!-- Leaderboard Button -->
+    <div id="leaderboard-btn" class="leaderboard-btn hidden" onclick="showLeaderboard()">
+        <span>🏆</span> Leaderboard
+    </div>
+
+    <!-- Selection Screen -->
+    <div id="selection-screen" class="container">
+        <h1 class="main-heading">QUIZ <span>APP</span></h1>
+        <div class="options-grid" id="category-grid"></div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="quiz-box hidden animate__animated animate__fadeIn">
+        <div class="progress-bar"><div id="progress" class="progress-fill"></div></div>
+        <div class="quiz-header">
+            <span id="q-counter">Question 1/10</span>
+            <span id="timer">⏳ 06:00</span>
+        </div>
+        <div id="question-container"></div>
+        <button id="action-btn" class="btn-next">Submit Answer</button>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="./app.js"></script>
+</body>
+</html>
